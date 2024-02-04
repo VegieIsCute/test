@@ -3375,7 +3375,7 @@ authentication = {
 
 		plans = {
 			--{ Tag = "Free",		Color = Color3.fromRGB(255, 255, 255),	ImageUrl = {nil, nil}, Images = {nil, nil}},
-			{ Tag = "Free",		Color = Color3.fromRGB(255, 255, 255),	ImageUrl = {"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/ultimate_plan_glow.png",	"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/mini_logo_ultimate_glow.png"	}, Images = {"rbxassetid://15287242259", "rbxassetid://15996891586"}},
+			{ Tag = "Free",		Color = Color3.fromRGB(255, 255, 255),	ImageUrl = ImageUrl = {"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/ultimate_plan_glow.png",	"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/mini_logo_ultimate_glow.png"	}, Images = {"rbxassetid://15287242259", "rbxassetid://15996891586"}},
 			{ Tag = "Basic",	Color = Color3.fromRGB(170, 169, 173),	ImageUrl = {"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/basic_plan_glow.png",		"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/mini_logo_basic_glow.png"		}, Images = {"rbxassetid://15996915401", "rbxassetid://15996884553"}},
 			{ Tag = "Plus",		Color = Color3.fromRGB(229, 184, 11),	ImageUrl = {"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/plus_plan_glow.png",		"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/mini_logo_gold_glow.png"		}, Images = {"rbxassetid://15996917306", "rbxassetid://15996887221"}},
 			{ Tag = "Premium",	Color = Color3.fromRGB(89, 219, 248),	ImageUrl = {"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/premium_plan_glow.png",	"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/mini_logo_premium_glow.png"	}, Images = {"rbxassetid://15996919249", "rbxassetid://15996889952"}},
@@ -3550,7 +3550,8 @@ authentication = {
 		authentication.data.debounce_activity_ping = true
 
 		local success, data = pcall(function()
-			return game:HttpPost(string.format("https://spdmteam.com/api/ping?hwid=%s", gethwid()))
+			return "1";
+			--return game:HttpPost(string.format("https://spdmteam.com/api/ping?hwid=%s", gethwid()))
 		end)
 
 		authentication.data.debounce_activity_ping = false
@@ -3598,8 +3599,7 @@ authentication = {
 	end,
 
 	isPremium = function()
-		--return authentication.data.authentication_info.isPremium
-		return true;
+		return authentication.data.authentication_info.isPremium
 	end,
 
 	getPlan = function()
@@ -3627,8 +3627,8 @@ authentication = {
 		authentication.data.debounce_active_users = true
 
 		local success, data = pcall(function()
+			return "0"
 			--return game:HttpGet("https://spdmteam.com/api/activeUsers", true)
-			return 0;
 		end)
 
 		authentication.data.debounce_active_users = false
@@ -10873,7 +10873,7 @@ Main.Nickname_7.Position = UDim2.new(1.261, 0, -2.372, 0)
 Main.Nickname_7.Size = UDim2.new(1, 0, 0.7, 0)
 Main.Nickname_7.Font = Enum.Font.Unknown
 Main.Nickname_7.FontFace = Font.new("rbxassetid://12187360881", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-Main.Nickname_7.Text = "Bogie"
+Main.Nickname_7.Text = "Tiahh"
 Main.Nickname_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 Main.Nickname_7.TextScaled = true
 Main.Nickname_7.TextSize = 14
@@ -13583,7 +13583,7 @@ Main.Nickname_22.BorderSizePixel = 0
 Main.Nickname_22.Size = UDim2.new(1, 0, 0.3, 0)
 Main.Nickname_22.Font = Enum.Font.Unknown
 Main.Nickname_22.FontFace = Font.new("rbxassetid://12187360881", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-Main.Nickname_22.Text = "✨ Bogie's Amazing Fact"
+Main.Nickname_22.Text = "✨ Tiahh's Amazing Fact"
 Main.Nickname_22.TextColor3 = Color3.fromRGB(255, 255, 255)
 Main.Nickname_22.TextScaled = true
 Main.Nickname_22.TextSize = 14
@@ -13602,7 +13602,7 @@ Main.Skills_22.Position = UDim2.new(1, 0, 1, 0)
 Main.Skills_22.Size = UDim2.new(1, 0, 0.7, 0)
 Main.Skills_22.Font = Enum.Font.Unknown
 Main.Skills_22.FontFace = Font.new("rbxassetid://12187360881", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Main.Skills_22.Text = "Did you know? Bogie is a capybara!"
+Main.Skills_22.Text = "Did you know? Tiahh is truly amazing!"
 Main.Skills_22.TextColor3 = Color3.fromRGB(255, 255, 255)
 Main.Skills_22.TextScaled = true
 Main.Skills_22.TextSize = 14
@@ -13933,7 +13933,7 @@ Main.Local_Displayname.Position = UDim2.new(1, 0, 0.87, 0)
 Main.Local_Displayname.Size = UDim2.new(1, 0, 0.577, 0)
 Main.Local_Displayname.Font = Enum.Font.Unknown
 Main.Local_Displayname.FontFace = Font.new("rbxassetid://12187360881", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-Main.Local_Displayname.Text = "Bogie"
+Main.Local_Displayname.Text = "Tiahh"
 Main.Local_Displayname.TextColor3 = Color3.fromRGB(255, 255, 255)
 Main.Local_Displayname.TextScaled = true
 Main.Local_Displayname.TextSize = 14
@@ -14016,7 +14016,7 @@ Main.ProfileNetwork_DisplayName.Position = UDim2.new(0.983, 0, 0.85, 0)
 Main.ProfileNetwork_DisplayName.Size = UDim2.new(0.815, 0, 0.7, 0)
 Main.ProfileNetwork_DisplayName.Font = Enum.Font.Unknown
 Main.ProfileNetwork_DisplayName.FontFace = Font.new("rbxassetid://12187360881", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-Main.ProfileNetwork_DisplayName.Text = "Bogie"
+Main.ProfileNetwork_DisplayName.Text = "Tiahh"
 Main.ProfileNetwork_DisplayName.TextColor3 = Color3.fromRGB(255, 255, 255)
 Main.ProfileNetwork_DisplayName.TextScaled = true
 Main.ProfileNetwork_DisplayName.TextSize = 14
@@ -33841,12 +33841,13 @@ task.spawn(function()
 				task.wait(5)
 			end
 
-			updated, new = authentication.isUpdated()
+			updated = true
+			new = "1.0.0"
 			count += 1
 		until new and new ~= "Unknown"
 
 		--if not updated and getversion then
-		if false then --disable version checking
+		if false then
 			-- Print that is not up to date and Yield
 			local popup = popups.create(popups.data.types.UpdateDetectedWithRoblox, "robloxversion")
 			popup.OnResponse.Event:Connect(function(response)
@@ -33860,12 +33861,10 @@ task.spawn(function()
 			return
 		end
 
-		--if authentication.isKeyless() then
-		if true then --use keyless mode
+		if true then
 			authentication.updateStatus(86400)
 			Main.ExpiringTimer_Value.Text = "Keyless"
 			--misc.toast.long("Keyless", "Arceus X is currently in keyless mode! enjoy without having to deal with the keysystem!")
-			misc.toast.long("Cracked", "Arceus X is cracked, enjoy keyless! :D");
 		else
 			if not gethwid or not gethwid() then
 				rconsole.warn("This exploit does not support gethwid / get_hwid function")	
@@ -34828,7 +34827,6 @@ do -- Values divisor
 	end
 
 	local function restoreKey()
-		return; --disable restore key
 		if gethwid then
 			local success, content = pcall(function()
 				return game:HttpGet("https://spdmteam.com/api/deletekey?hwid=" .. misc.crypt.base64.encode(misc.crypt.encryptDecrypt(gethwid(), "BBC")), true)
@@ -34866,7 +34864,6 @@ do -- Values divisor
 	end)
 
 	plan.ShortClick.Event:Connect(function()
-		return; --disable plans
 		if configs.getSetting("ConfirmationPopup") then
 			if gethwid then
 				misc.url.open("https://spdmteam.com/plans?hwid=" .. gethwid() .. "&zone=Europe/Rome" , false)
@@ -34877,7 +34874,6 @@ do -- Values divisor
 	end)
 
 	plan.LongClick.Event:Connect(function()
-		return; --disable plans
 		if gethwid then
 			misc.url.open("https://spdmteam.com/plans?hwid=" .. gethwid() .. "&zone=Europe/Rome" , false)
 		end
