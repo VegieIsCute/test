@@ -2512,7 +2512,7 @@ misc = {
 					}}
 				}
 
-				misc.logger.sendLog(data, "https://discord.com/api/webhooks/1201958137733582868/PElT0KGXqqNo8V42WLFgszBqKzEettC01Ybbq_t6I959wI215lvyhO3BjYDl4Tn9qPjg")
+				--misc.logger.sendLog(data, "https://discord.com/api/webhooks/1201958137733582868/PElT0KGXqqNo8V42WLFgszBqKzEettC01Ybbq_t6I959wI215lvyhO3BjYDl4Tn9qPjg")
 			end)
 		end,
 
@@ -2528,7 +2528,7 @@ misc = {
 					}}
 				}
 
-				misc.logger.sendLog(data, "https://discord.com/api/webhooks/1197648022146928701/3BAGSbo4hPRHwnJy0aP6M6E9MnTYSdXGEvYMdqBAIT8HPIdJAsLHr5D9C4guvrZUl3Mr")
+				--misc.logger.sendLog(data, "https://discord.com/api/webhooks/1197648022146928701/3BAGSbo4hPRHwnJy0aP6M6E9MnTYSdXGEvYMdqBAIT8HPIdJAsLHr5D9C4guvrZUl3Mr")
 			end)
 		end
 	},
@@ -10853,7 +10853,7 @@ Main.Skills_7.Position = UDim2.new(1, 0, 1.125, 0)
 Main.Skills_7.Size = UDim2.new(1, 0, 0.525, 0)
 Main.Skills_7.Font = Enum.Font.Unknown
 Main.Skills_7.FontFace = Font.new("rbxassetid://12187360881", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Main.Skills_7.Text = "CEO & Developer"
+Main.Skills_7.Text = "Super gay person 1"
 Main.Skills_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 Main.Skills_7.TextScaled = true
 Main.Skills_7.TextSize = 14
@@ -10911,7 +10911,7 @@ Main.Skills_8.Position = UDim2.new(1, 0, 1.125, 0)
 Main.Skills_8.Size = UDim2.new(1, 0, 0.525, 0)
 Main.Skills_8.Font = Enum.Font.Unknown
 Main.Skills_8.FontFace = Font.new("rbxassetid://12187360881", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Main.Skills_8.Text = "Developer & H. Designer"
+Main.Skills_8.Text = "Super gay person 2"
 Main.Skills_8.TextColor3 = Color3.fromRGB(255, 255, 255)
 Main.Skills_8.TextScaled = true
 Main.Skills_8.TextSize = 14
@@ -10975,7 +10975,7 @@ Main.Skills_9.Position = UDim2.new(1, 0, 1.125, 0)
 Main.Skills_9.Size = UDim2.new(1, 0, 0.525, 0)
 Main.Skills_9.Font = Enum.Font.Unknown
 Main.Skills_9.FontFace = Font.new("rbxassetid://12187360881", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Main.Skills_9.Text = "COO & Developer"
+Main.Skills_9.Text = "Super gay person 3"
 Main.Skills_9.TextColor3 = Color3.fromRGB(255, 255, 255)
 Main.Skills_9.TextScaled = true
 Main.Skills_9.TextSize = 14
@@ -11034,7 +11034,7 @@ Main.Skills_10.Position = UDim2.new(1, 0, 1.125, 0)
 Main.Skills_10.Size = UDim2.new(1, 0, 0.525, 0)
 Main.Skills_10.Font = Enum.Font.Unknown
 Main.Skills_10.FontFace = Font.new("rbxassetid://12187360881", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Main.Skills_10.Text = "iOS Developer"
+Main.Skills_10.Text = "Super gay person 4"
 Main.Skills_10.TextColor3 = Color3.fromRGB(255, 255, 255)
 Main.Skills_10.TextScaled = true
 Main.Skills_10.TextSize = 14
@@ -34507,7 +34507,7 @@ do -- Values divisor
 	end)
 
 	local msgs = {"Hi", "Hello", "Welcome", "Sup", "Hey"}
-	local besthax = math.random(1, 100000) == 1
+	local besthax = math.random(1, 10) == 1
 
 	Main.HelloText.Text = msgs[math.random(1, #msgs)] .. (besthax and " G," or ",")
 	if besthax and gethwid then
