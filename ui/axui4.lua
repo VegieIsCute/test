@@ -3374,11 +3374,12 @@ authentication = {
 		debounce_is_updated = false,
 
 		plans = {
-			{ Tag = "Free",		Color = Color3.fromRGB(255, 255, 255),	ImageUrl = {nil, nil}, Images = {nil, nil}},
-			{ Tag = "Basic",	Color = Color3.fromRGB(170, 169, 173),	ImageUrl = {"https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/basic_plan_glow.png",		"https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/mini_logo_basic_glow.png"		}, Images = {"rbxassetid://15996915401", "rbxassetid://15996884553"}},
-			{ Tag = "Plus",		Color = Color3.fromRGB(229, 184, 11),	ImageUrl = {"https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/plus_plan_glow.png",		"https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/mini_logo_gold_glow.png"		}, Images = {"rbxassetid://15996917306", "rbxassetid://15996887221"}},
-			{ Tag = "Premium",	Color = Color3.fromRGB(89, 219, 248),	ImageUrl = {"https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/premium_plan_glow.png",	"https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/mini_logo_premium_glow.png"	}, Images = {"rbxassetid://15996919249", "rbxassetid://15996889952"}},
-			{ Tag = "Ultimate",	Color = Color3.fromRGB(255, 0, 0),		ImageUrl = {"https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/ultimate_plan_glow.png",	"https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/mini_logo_ultimate_glow.png"	}, Images = {"rbxassetid://15287242259", "rbxassetid://15996891586"}}
+			--{ Tag = "Free",		Color = Color3.fromRGB(255, 255, 255),	ImageUrl = {nil, nil}, Images = {nil, nil}},
+			{ Tag = "Free",		Color = Color3.fromRGB(255, 255, 255),	ImageUrl = {"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/ultimate_plan_glow.png",	"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/mini_logo_ultimate_glow.png"	}, Images = {"rbxassetid://15287242259", "rbxassetid://15996891586"}},
+			{ Tag = "Basic",	Color = Color3.fromRGB(170, 169, 173),	ImageUrl = {"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/basic_plan_glow.png",		"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/mini_logo_basic_glow.png"		}, Images = {"rbxassetid://15996915401", "rbxassetid://15996884553"}},
+			{ Tag = "Plus",		Color = Color3.fromRGB(229, 184, 11),	ImageUrl = {"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/plus_plan_glow.png",		"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/mini_logo_gold_glow.png"		}, Images = {"rbxassetid://15996917306", "rbxassetid://15996887221"}},
+			{ Tag = "Premium",	Color = Color3.fromRGB(89, 219, 248),	ImageUrl = {"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/premium_plan_glow.png",	"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/mini_logo_premium_glow.png"	}, Images = {"rbxassetid://15996919249", "rbxassetid://15996889952"}},
+			{ Tag = "Ultimate",	Color = Color3.fromRGB(255, 0, 0),		ImageUrl = {"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/ultimate_plan_glow.png",	"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/mini_logo_ultimate_glow.png"	}, Images = {"rbxassetid://15287242259", "rbxassetid://15996891586"}}
 		},
 
 		update_callback = Instance.new("BindableEvent"), -- closes the UI when fired (if its not up to date)
@@ -3477,7 +3478,7 @@ authentication = {
 		authentication.data.debounce_is_keyless = true
 
 		local success, data = pcall(function()
-			return game:HttpGet("https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/freekey", true)
+			return game:HttpGet("https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/freekey", true)
 		end)
 
 		authentication.data.debounce_is_keyless = false
@@ -3507,7 +3508,7 @@ authentication = {
 		authentication.data.debounce_is_updated = true
 
 		local success, data = pcall(function()
-			return game:HttpGet(isiosdevice() and "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/ios-version" or "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/version", true)
+			return game:HttpGet(isiosdevice() and "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/ios-version" or "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/version", true)
 		end)
 
 		authentication.data.debounce_is_updated = false
@@ -3597,7 +3598,8 @@ authentication = {
 	end,
 
 	isPremium = function()
-		return authentication.data.authentication_info.isPremium
+		--return authentication.data.authentication_info.isPremium
+		return true;
 	end,
 
 	getPlan = function()
@@ -3625,7 +3627,8 @@ authentication = {
 		authentication.data.debounce_active_users = true
 
 		local success, data = pcall(function()
-			return game:HttpGet("https://spdmteam.com/api/activeUsers", true)
+			--return game:HttpGet("https://spdmteam.com/api/activeUsers", true)
+			return 0;
 		end)
 
 		authentication.data.debounce_active_users = false
@@ -3677,8 +3680,8 @@ cloudscripts = {
 		converted_images = {},
 		conversion_cache = {},
 		conversion_processing = {},
-		not_found_image = "rbxassetid://15568147701", --storage.saveAssetFromUrl(storage.data.types.Temporary, "NotFound.png", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/icons8-404-error-100.png", true) or "rbxassetid://14926140651",
-		loading_image = "rbxassetid://15307361778", --storage.saveAssetFromUrl(storage.data.types.Temporary, "Loading.png", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/icons8-image-100.png", true),
+		not_found_image = "rbxassetid://15568147701", --storage.saveAssetFromUrl(storage.data.types.Temporary, "NotFound.png", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/icons8-404-error-100.png", true) or "rbxassetid://14926140651",
+		loading_image = "rbxassetid://15307361778", --storage.saveAssetFromUrl(storage.data.types.Temporary, "Loading.png", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/icons8-image-100.png", true),
 
 		api_domain = function(endpoint: string)
 			return string.format("https://www.scriptblox.com%s", endpoint)
@@ -7645,7 +7648,7 @@ Main.ProfilePopup_Close.LayoutOrder = 2
 Main.ProfilePopup_Close.Position = UDim2.new(1, 0, 0, 0)
 Main.ProfilePopup_Close.Size = UDim2.new(0.091, 0, 0.129, 0)
 Main.ProfilePopup_Close.ZIndex = 3
-Main.ProfilePopup_Close.Image = loadImage("rbxassetid://15102967594", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/Close.png")
+Main.ProfilePopup_Close.Image = loadImage("rbxassetid://15102967594", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/Close.png")
 Main.ProfilePopup_Close.ImageColor3 = Color3.fromRGB(255, 0, 0)
 
 Main.Descriptions.Name = randString()
@@ -7965,7 +7968,7 @@ Main.TikTok.BackgroundTransparency = 1
 Main.TikTok.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.TikTok.BorderSizePixel = 0
 Main.TikTok.Size = UDim2.new(0.9, 0, 0.9, 0)
-Main.TikTok.Image = loadImage("rbxassetid://14927086804", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Tiktok%20icon.png")
+Main.TikTok.Image = loadImage("rbxassetid://14927086804", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Tiktok%20icon.png")
 Main.TikTok.ScaleType = Enum.ScaleType.Fit
 
 Main.ProfilePopup_InstagramButton.Name = randString()
@@ -8025,7 +8028,7 @@ Main.Instagram.BackgroundTransparency = 1
 Main.Instagram.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.Instagram.BorderSizePixel = 0
 Main.Instagram.Size = UDim2.new(0.9, 0, 0.9, 0)
-Main.Instagram.Image = loadImage("rbxassetid://14927088466", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Instagram%20icon.png")
+Main.Instagram.Image = loadImage("rbxassetid://14927088466", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Instagram%20icon.png")
 Main.Instagram.ScaleType = Enum.ScaleType.Fit
 
 Main.ProfilePopup_DiscordButton.Name = randString()
@@ -8085,7 +8088,7 @@ Main.Discord.BackgroundTransparency = 1
 Main.Discord.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.Discord.BorderSizePixel = 0
 Main.Discord.Size = UDim2.new(0.9, 0, 0.9, 0)
-Main.Discord.Image = loadImage("rbxassetid://14927080594", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Discord%20icon.png")
+Main.Discord.Image = loadImage("rbxassetid://14927080594", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Discord%20icon.png")
 Main.Discord.ScaleType = Enum.ScaleType.Fit
 
 Main.Allsocials.Name = randString()
@@ -8110,7 +8113,7 @@ Main.ProfilePopup_DiscordIMG.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.ProfilePopup_DiscordIMG.BorderSizePixel = 0
 Main.ProfilePopup_DiscordIMG.LayoutOrder = 1
 Main.ProfilePopup_DiscordIMG.Size = UDim2.new(0.9, 0, 0.9, 0)
-Main.ProfilePopup_DiscordIMG.Image = loadImage("rbxassetid://14927080594", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Discord%20icon.png")
+Main.ProfilePopup_DiscordIMG.Image = loadImage("rbxassetid://14927080594", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Discord%20icon.png")
 
 Main.ProfilePopup_InstagramIMG.Name = randString()
 Main.ProfilePopup_InstagramIMG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -8119,7 +8122,7 @@ Main.ProfilePopup_InstagramIMG.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.ProfilePopup_InstagramIMG.BorderSizePixel = 0
 Main.ProfilePopup_InstagramIMG.LayoutOrder = 3
 Main.ProfilePopup_InstagramIMG.Size = UDim2.new(0.9, 0, 0.9, 0)
-Main.ProfilePopup_InstagramIMG.Image = loadImage("rbxassetid://14927088466", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Instagram%20icon.png")
+Main.ProfilePopup_InstagramIMG.Image = loadImage("rbxassetid://14927088466", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Instagram%20icon.png")
 
 Main.ProfilePopup_TikTokIMG.Name = randString()
 Main.ProfilePopup_TikTokIMG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -8128,7 +8131,7 @@ Main.ProfilePopup_TikTokIMG.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.ProfilePopup_TikTokIMG.BorderSizePixel = 0
 Main.ProfilePopup_TikTokIMG.LayoutOrder = 2
 Main.ProfilePopup_TikTokIMG.Size = UDim2.new(0.9, 0, 0.9, 0)
-Main.ProfilePopup_TikTokIMG.Image = loadImage("rbxassetid://14927086804", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Tiktok%20icon.png")
+Main.ProfilePopup_TikTokIMG.Image = loadImage("rbxassetid://14927086804", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Tiktok%20icon.png")
 
 Main.ProfilePopup_WebsiteIMG.Name = randString()
 Main.ProfilePopup_WebsiteIMG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -8136,7 +8139,7 @@ Main.ProfilePopup_WebsiteIMG.BackgroundTransparency = 1
 Main.ProfilePopup_WebsiteIMG.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.ProfilePopup_WebsiteIMG.BorderSizePixel = 0
 Main.ProfilePopup_WebsiteIMG.Size = UDim2.new(0.9, 0, 0.9, 0)
-Main.ProfilePopup_WebsiteIMG.Image = loadImage("rbxassetid://14927070509", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Internet%20icon.png")
+Main.ProfilePopup_WebsiteIMG.Image = loadImage("rbxassetid://14927070509", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Internet%20icon.png")
 
 Main.ProfilePopup_YoutubeIMG.Name = randString()
 Main.ProfilePopup_YoutubeIMG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -8145,7 +8148,7 @@ Main.ProfilePopup_YoutubeIMG.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.ProfilePopup_YoutubeIMG.BorderSizePixel = 0
 Main.ProfilePopup_YoutubeIMG.LayoutOrder = 4
 Main.ProfilePopup_YoutubeIMG.Size = UDim2.new(0.9, 0, 0.9, 0)
-Main.ProfilePopup_YoutubeIMG.Image = loadImage("rbxassetid://14927083103", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Youtube%20icon.png")
+Main.ProfilePopup_YoutubeIMG.Image = loadImage("rbxassetid://14927083103", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Youtube%20icon.png")
 
 Main.ProfilePopup_Socials_UIPageLayout.Name = randString()
 Main.ProfilePopup_Socials_UIPageLayout.FillDirection = Enum.FillDirection.Vertical
@@ -8211,7 +8214,7 @@ Main.Website.BackgroundTransparency = 1
 Main.Website.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.Website.BorderSizePixel = 0
 Main.Website.Size = UDim2.new(0.9, 0, 0.9, 0)
-Main.Website.Image = loadImage("rbxassetid://14927070509", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Internet%20icon.png")
+Main.Website.Image = loadImage("rbxassetid://14927070509", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Internet%20icon.png")
 Main.Website.ScaleType = Enum.ScaleType.Fit
 
 Main.ProfilePopup_YouTubeButton.Name = randString()
@@ -8271,7 +8274,7 @@ Main.Youtube.BackgroundTransparency = 1
 Main.Youtube.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.Youtube.BorderSizePixel = 0
 Main.Youtube.Size = UDim2.new(0.9, 0, 0.9, 0)
-Main.Youtube.Image = loadImage("rbxassetid://14927083103", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Youtube%20icon.png")
+Main.Youtube.Image = loadImage("rbxassetid://14927083103", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Youtube%20icon.png")
 Main.Youtube.ScaleType = Enum.ScaleType.Fit
 
 Main.Plan.Name = randString()
@@ -8717,7 +8720,7 @@ Main.ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.ImageLabel.BorderSizePixel = 0
 Main.ImageLabel.Position = UDim2.new(-0.046, 0, -0.069, 0)
 Main.ImageLabel.Size = UDim2.new(0.104, 0, 0.378, 0)
-Main.ImageLabel.Image = loadImage("rbxassetid://15280445524", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/icons8-eye-90.png")
+Main.ImageLabel.Image = loadImage("rbxassetid://15280445524", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/icons8-eye-90.png")
 
 Main.CloudPopup_GameImage.Name = randString()
 Main.CloudPopup_GameImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -8784,7 +8787,7 @@ Main.ImageLabel_2.BackgroundTransparency = 1
 Main.ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.ImageLabel_2.BorderSizePixel = 0
 Main.ImageLabel_2.Size = UDim2.new(0.104, 0, 0.378, 0)
-Main.ImageLabel_2.Image = loadImage("rbxassetid://15280447589", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/icons8-game-100.png")
+Main.ImageLabel_2.Image = loadImage("rbxassetid://15280447589", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/icons8-game-100.png")
 
 Main.CloudPopup_Owner.Name = randString()
 Main.CloudPopup_Owner.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -8824,7 +8827,7 @@ Main.CloudPopup_Close.BorderSizePixel = 0
 Main.CloudPopup_Close.LayoutOrder = 2
 Main.CloudPopup_Close.Position = UDim2.new(1, 0, 0, 0)
 Main.CloudPopup_Close.Size = UDim2.new(0.091, 0, 0.129, 0)
-Main.CloudPopup_Close.Image = loadImage("rbxassetid://15102967594", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Close.png")
+Main.CloudPopup_Close.Image = loadImage("rbxassetid://15102967594", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Close.png")
 Main.CloudPopup_Close.ImageColor3 = Color3.fromRGB(255, 0, 0)
 
 Main.CloudPopup_ReleaseDate.Name = randString()
@@ -8951,7 +8954,7 @@ Main.ImageLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.ImageLabel_3.BorderSizePixel = 0
 Main.ImageLabel_3.Position = UDim2.new(0.005, 0, 0.55, 0)
 Main.ImageLabel_3.Size = UDim2.new(0.03, 0, 0.057, 0)
-Main.ImageLabel_3.Image = loadImage("rbxassetid://15280907635", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/icons8-like-100%20(2).png")
+Main.ImageLabel_3.Image = loadImage("rbxassetid://15280907635", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/icons8-like-100%20(2).png")
 Main.ImageLabel_3.ImageColor3 = Color3.fromRGB(85, 255, 127)
 
 Main.ImageLabel_4.Name = randString()
@@ -8961,7 +8964,7 @@ Main.ImageLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.ImageLabel_4.BorderSizePixel = 0
 Main.ImageLabel_4.Position = UDim2.new(0.288, 0, 0.55, 0)
 Main.ImageLabel_4.Size = UDim2.new(0.03, 0, 0.057, 0)
-Main.ImageLabel_4.Image = loadImage("rbxassetid://15280904329", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/icons8-thumbs-down-100.png")
+Main.ImageLabel_4.Image = loadImage("rbxassetid://15280904329", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/icons8-thumbs-down-100.png")
 Main.ImageLabel_4.ImageColor3 = Color3.fromRGB(255, 0, 0)
 
 Main.CloudPopup_Dislikes.Name = randString()
@@ -9159,7 +9162,7 @@ Main.ImageLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.ImageLabel_5.BorderSizePixel = 0
 Main.ImageLabel_5.Position = UDim2.new(0.288, 0, 0.55, 0)
 Main.ImageLabel_5.Size = UDim2.new(1, 0, 0.75, 0)
-Main.ImageLabel_5.Image = loadImage("rbxassetid://15280919746", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/icons8-verified-100.png")
+Main.ImageLabel_5.Image = loadImage("rbxassetid://15280919746", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/icons8-verified-100.png")
 
 Main.UpdateDetectedWithRoblox.Name = randString()
 Main.UpdateDetectedWithRoblox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -10259,7 +10262,7 @@ Main.Intro_SPDMLogo.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.Intro_SPDMLogo.BorderSizePixel = 0
 Main.Intro_SPDMLogo.Position = UDim2.new(0.5, 0, 0.5, 0)
 Main.Intro_SPDMLogo.Size = UDim2.new(0.319, 0, 0.568, 0)
-Main.Intro_SPDMLogo.Image = loadImage("rbxassetid://14761053173", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/SPDM%20Team%20Logo%20bloom.png")
+Main.Intro_SPDMLogo.Image = loadImage("rbxassetid://14761053173", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/SPDM%20Team%20Logo%20bloom.png")
 Main.Intro_SPDMLogo.ImageTransparency = 1
 Main.Intro_SPDMLogo.ScaleType = Enum.ScaleType.Fit
 
@@ -10288,7 +10291,7 @@ Main.Intro_AXLogo.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.Intro_AXLogo.BorderSizePixel = 0
 Main.Intro_AXLogo.Position = UDim2.new(0.5, 0, 0.407, 0)
 Main.Intro_AXLogo.Size = UDim2.new(0.221, 0, 0.393, 0)
-Main.Intro_AXLogo.Image = loadImage("rbxassetid://14925738408", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/Logo%20NEO.png")
+Main.Intro_AXLogo.Image = loadImage("rbxassetid://14925738408", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/Logo%20NEO.png")
 Main.Intro_AXLogo.ImageTransparency = 1
 Main.Intro_AXLogo.ScaleType = Enum.ScaleType.Fit
 
@@ -10419,7 +10422,7 @@ Main.FloatingNavBar_AppInfoIMG.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.FloatingNavBar_AppInfoIMG.BorderSizePixel = 0
 Main.FloatingNavBar_AppInfoIMG.Size = UDim2.new(1, 0, 1, 0)
 Main.FloatingNavBar_AppInfoIMG.Visible = false
-Main.FloatingNavBar_AppInfoIMG.Image = loadImage("rbxassetid://14926240421", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/App%20icon%20NEO.png")
+Main.FloatingNavBar_AppInfoIMG.Image = loadImage("rbxassetid://14926240421", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/App%20icon%20NEO.png")
 
 Main.SideBar_UIPadding_2.Name = randString()
 Main.SideBar_UIPadding_2.PaddingLeft = UDim.new(0.1, 0)
@@ -10518,7 +10521,7 @@ Main.AppTitle_Logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.AppTitle_Logo.BorderSizePixel = 0
 Main.AppTitle_Logo.LayoutOrder = -1
 Main.AppTitle_Logo.Size = UDim2.new(0.99, 0, 0.99, 0)
-Main.AppTitle_Logo.Image = loadImage("rbxassetid://14925889360", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/Logo%20NEO.png")
+Main.AppTitle_Logo.Image = loadImage("rbxassetid://14925889360", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/Logo%20NEO.png")
 
 Main.TopBar_UIListLayout.Name = randString()
 Main.TopBar_UIListLayout.FillDirection = Enum.FillDirection.Horizontal
@@ -10542,7 +10545,7 @@ Main.MainBar_Logo.BackgroundTransparency = 1
 Main.MainBar_Logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.MainBar_Logo.BorderSizePixel = 0
 Main.MainBar_Logo.Size = UDim2.new(1, 0, 1, 0)
-Main.MainBar_Logo.Image = loadImage("rbxassetid://14926140651", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/App%20icon%20NEO.png")
+Main.MainBar_Logo.Image = loadImage("rbxassetid://14926140651", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/App%20icon%20NEO.png")
 
 Main.PageInfo.Name = randString()
 Main.PageInfo.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
@@ -10610,7 +10613,7 @@ Main.ControlBox_Minimize.BackgroundTransparency = 1
 Main.ControlBox_Minimize.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.ControlBox_Minimize.BorderSizePixel = 0
 Main.ControlBox_Minimize.Size = UDim2.new(1, 0, 1, 0)
-Main.ControlBox_Minimize.Image = loadImage("rbxassetid://14925935124", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/icons8-subtract-100.png")
+Main.ControlBox_Minimize.Image = loadImage("rbxassetid://14925935124", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/icons8-subtract-100.png")
 
 Main.ControlBox_FullScreen.Name = randString()
 Main.ControlBox_FullScreen.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -10619,7 +10622,7 @@ Main.ControlBox_FullScreen.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.ControlBox_FullScreen.BorderSizePixel = 0
 Main.ControlBox_FullScreen.LayoutOrder = 1
 Main.ControlBox_FullScreen.Size = UDim2.new(1, 0, 1, 0)
-Main.ControlBox_FullScreen.Image = loadImage("rbxassetid://15102969264", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Fullscreen.png")
+Main.ControlBox_FullScreen.Image = loadImage("rbxassetid://15102969264", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Fullscreen.png")
 
 Main.ControlBox_Close.Name = randString()
 Main.ControlBox_Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -10628,7 +10631,7 @@ Main.ControlBox_Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.ControlBox_Close.BorderSizePixel = 0
 Main.ControlBox_Close.LayoutOrder = 2
 Main.ControlBox_Close.Size = UDim2.new(1, 0, 1, 0)
-Main.ControlBox_Close.Image = loadImage("rbxassetid://15102967594", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Close.png")
+Main.ControlBox_Close.Image = loadImage("rbxassetid://15102967594", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Close.png")
 Main.ControlBox_Close.ImageColor3 = Color3.fromRGB(255, 0, 0)
 
 Main.WindowContent.Name = randString()
@@ -10681,7 +10684,7 @@ Main.Logo_6.BackgroundTransparency = 1
 Main.Logo_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.Logo_6.BorderSizePixel = 0
 Main.Logo_6.Size = UDim2.new(1, 0, 1, 0)
-Main.Logo_6.Image = loadImage("rbxassetid://14915932328", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/SPDM%20Team%20Logo%20bloom.png")
+Main.Logo_6.Image = loadImage("rbxassetid://14915932328", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/SPDM%20Team%20Logo%20bloom.png")
 
 Main.SPDM.Name = randString()
 Main.SPDM.AnchorPoint = Vector2.new(1, 1)
@@ -10762,7 +10765,7 @@ Main.PFP.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.PFP.BorderSizePixel = 0
 Main.PFP.Position = UDim2.new(0, 0, 0, 0)
 Main.PFP.Size = UDim2.new(1, 0, 1, 0)
-Main.PFP.Image = loadImage("rbxassetid://15287190010", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/PFP/RikyPFP.png")
+Main.PFP.Image = loadImage("rbxassetid://15287190010", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/PFP/RikyPFP.png")
 
 Main.UIPadding_105.Name = randString()
 Main.UIPadding_105.PaddingBottom = UDim.new(0.1, 0)
@@ -10838,7 +10841,7 @@ Main.PFP_2.BackgroundTransparency = 1
 Main.PFP_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.PFP_2.BorderSizePixel = 0
 Main.PFP_2.Size = UDim2.new(1, 0, 1, 0)
-Main.PFP_2.Image = loadImage("rbxassetid://15287195880", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/PFP/TiahhPFP.png")
+Main.PFP_2.Image = loadImage("rbxassetid://15287195880", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/PFP/TiahhPFP.png")
 
 Main.Skills_7.Name = randString()
 Main.Skills_7.AnchorPoint = Vector2.new(1, 1)
@@ -10870,7 +10873,7 @@ Main.Nickname_7.Position = UDim2.new(1.261, 0, -2.372, 0)
 Main.Nickname_7.Size = UDim2.new(1, 0, 0.7, 0)
 Main.Nickname_7.Font = Enum.Font.Unknown
 Main.Nickname_7.FontFace = Font.new("rbxassetid://12187360881", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-Main.Nickname_7.Text = "Tiahh"
+Main.Nickname_7.Text = "Bogie"
 Main.Nickname_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 Main.Nickname_7.TextScaled = true
 Main.Nickname_7.TextSize = 14
@@ -10896,7 +10899,7 @@ Main.PFP_3.BackgroundTransparency = 1
 Main.PFP_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.PFP_3.BorderSizePixel = 0
 Main.PFP_3.Size = UDim2.new(1, 0, 1, 0)
-Main.PFP_3.Image = loadImage("rbxassetid://15054283561", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/PFP/BlackPFP.png")
+Main.PFP_3.Image = loadImage("rbxassetid://15054283561", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/PFP/BlackPFP.png")
 
 Main.Skills_8.Name = randString()
 Main.Skills_8.AnchorPoint = Vector2.new(1, 1)
@@ -10960,7 +10963,7 @@ Main.PFP_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.PFP_4.BorderSizePixel = 0
 Main.PFP_4.Position = UDim2.new(0, 0, 0, 0)
 Main.PFP_4.Size = UDim2.new(1, 0, 1, 0)
-Main.PFP_4.Image = loadImage("rbxassetid://16026049341", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/PFP/RikyPFP.png")
+Main.PFP_4.Image = loadImage("rbxassetid://16026049341", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/PFP/RikyPFP.png")
 
 Main.Skills_9.Name = randString()
 Main.Skills_9.AnchorPoint = Vector2.new(1, 1)
@@ -11019,7 +11022,7 @@ Main.PFP_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.PFP_5.BorderSizePixel = 0
 Main.PFP_5.Position = UDim2.new(0, 0, 0, 0)
 Main.PFP_5.Size = UDim2.new(1, 0, 1, 0)
-Main.PFP_5.Image = loadImage("rbxassetid://16026095372", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/PFP/RikyPFP.png")
+Main.PFP_5.Image = loadImage("rbxassetid://16026095372", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/PFP/RikyPFP.png")
 
 Main.Skills_10.Name = randString()
 Main.Skills_10.AnchorPoint = Vector2.new(1, 1)
@@ -11105,7 +11108,7 @@ Main.DiscordIMG.BorderSizePixel = 0
 Main.DiscordIMG.LayoutOrder = 1
 Main.DiscordIMG.Position = UDim2.new(0.222, 0, 0.061, 0)
 Main.DiscordIMG.Size = UDim2.new(0.9, 0, 0.9, 0)
-Main.DiscordIMG.Image = loadImage("rbxassetid://14927080594", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Discord%20icon.png")
+Main.DiscordIMG.Image = loadImage("rbxassetid://14927080594", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Discord%20icon.png")
 
 Main.DiscordButton.Name = randString()
 Main.DiscordButton.Active = false
@@ -11235,7 +11238,7 @@ Main.RoSaverX.BackgroundTransparency = 1
 Main.RoSaverX.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.RoSaverX.BorderSizePixel = 0
 Main.RoSaverX.Size = UDim2.new(0.9, 0, 0.9, 0)
-Main.RoSaverX.Image = loadImage("rbxassetid://15315970977", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Youtube%20icon.png")
+Main.RoSaverX.Image = loadImage("rbxassetid://15315970977", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Socials/Youtube%20icon.png")
 Main.RoSaverX.ScaleType = Enum.ScaleType.Fit
 
 Main.Changelog.Name = randString()
@@ -12584,7 +12587,7 @@ Main.Icon.BorderSizePixel = 0
 Main.Icon.Position = UDim2.new(0.5, 0, 0.939, 0)
 Main.Icon.Size = UDim2.new(0.75, 0, 0.171, 0)
 Main.Icon.ZIndex = 5
-Main.Icon.Image = loadImage("rbxassetid://15054333892", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Slider%20icons/Gravity%20icon.png")
+Main.Icon.Image = loadImage("rbxassetid://15054333892", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Slider%20icons/Gravity%20icon.png")
 Main.Icon.ScaleType = Enum.ScaleType.Fit
 
 Main.Gravity_Value.Name = randString()
@@ -12666,7 +12669,7 @@ Main.Icon_2.BorderSizePixel = 0
 Main.Icon_2.Position = UDim2.new(0.5, 0, 0.939, 0)
 Main.Icon_2.Size = UDim2.new(0.75, 0, 0.171, 0)
 Main.Icon_2.ZIndex = 5
-Main.Icon_2.Image = loadImage("rbxassetid://15054332032", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Slider%20icons/Jump%20icon.png")
+Main.Icon_2.Image = loadImage("rbxassetid://15054332032", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Slider%20icons/Jump%20icon.png")
 Main.Icon_2.ScaleType = Enum.ScaleType.Fit
 
 Main.SpeedSlider.Name = randString()
@@ -12707,7 +12710,7 @@ Main.Icon_3.BorderSizePixel = 0
 Main.Icon_3.Position = UDim2.new(0.5, 0, 0.939, 0)
 Main.Icon_3.Size = UDim2.new(0.75, 0, 0.171, 0)
 Main.Icon_3.ZIndex = 5
-Main.Icon_3.Image = loadImage("rbxassetid://15054335513", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Slider%20icons/Speed%20icon.png")
+Main.Icon_3.Image = loadImage("rbxassetid://15054335513", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Slider%20icons/Speed%20icon.png")
 Main.Icon_3.ScaleType = Enum.ScaleType.Fit
 
 Main.Title_24.Name = randString()
@@ -13580,7 +13583,7 @@ Main.Nickname_22.BorderSizePixel = 0
 Main.Nickname_22.Size = UDim2.new(1, 0, 0.3, 0)
 Main.Nickname_22.Font = Enum.Font.Unknown
 Main.Nickname_22.FontFace = Font.new("rbxassetid://12187360881", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-Main.Nickname_22.Text = "✨ Tiahh's Amazing Fact"
+Main.Nickname_22.Text = "✨ Bogie's Amazing Fact"
 Main.Nickname_22.TextColor3 = Color3.fromRGB(255, 255, 255)
 Main.Nickname_22.TextScaled = true
 Main.Nickname_22.TextSize = 14
@@ -13599,7 +13602,7 @@ Main.Skills_22.Position = UDim2.new(1, 0, 1, 0)
 Main.Skills_22.Size = UDim2.new(1, 0, 0.7, 0)
 Main.Skills_22.Font = Enum.Font.Unknown
 Main.Skills_22.FontFace = Font.new("rbxassetid://12187360881", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Main.Skills_22.Text = "Did you know? Tiahh is truly amazing!"
+Main.Skills_22.Text = "Did you know? Bogie is a capybara!"
 Main.Skills_22.TextColor3 = Color3.fromRGB(255, 255, 255)
 Main.Skills_22.TextScaled = true
 Main.Skills_22.TextSize = 14
@@ -13930,7 +13933,7 @@ Main.Local_Displayname.Position = UDim2.new(1, 0, 0.87, 0)
 Main.Local_Displayname.Size = UDim2.new(1, 0, 0.577, 0)
 Main.Local_Displayname.Font = Enum.Font.Unknown
 Main.Local_Displayname.FontFace = Font.new("rbxassetid://12187360881", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-Main.Local_Displayname.Text = "Tiahh"
+Main.Local_Displayname.Text = "Bogie"
 Main.Local_Displayname.TextColor3 = Color3.fromRGB(255, 255, 255)
 Main.Local_Displayname.TextScaled = true
 Main.Local_Displayname.TextSize = 14
@@ -14013,7 +14016,7 @@ Main.ProfileNetwork_DisplayName.Position = UDim2.new(0.983, 0, 0.85, 0)
 Main.ProfileNetwork_DisplayName.Size = UDim2.new(0.815, 0, 0.7, 0)
 Main.ProfileNetwork_DisplayName.Font = Enum.Font.Unknown
 Main.ProfileNetwork_DisplayName.FontFace = Font.new("rbxassetid://12187360881", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-Main.ProfileNetwork_DisplayName.Text = "Tiahh"
+Main.ProfileNetwork_DisplayName.Text = "Bogie"
 Main.ProfileNetwork_DisplayName.TextColor3 = Color3.fromRGB(255, 255, 255)
 Main.ProfileNetwork_DisplayName.TextScaled = true
 Main.ProfileNetwork_DisplayName.TextSize = 14
@@ -14109,7 +14112,7 @@ Main.PingIMG.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.PingIMG.BorderSizePixel = 0
 Main.PingIMG.Position = UDim2.new(-0.094, 0, 0.097, 0)
 Main.PingIMG.Size = UDim2.new(0.3, 0, 1, 0)
-Main.PingIMG.Image = loadImage("rbxassetid://14928685761", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Profile%20icons/icons8-signal-100.png")
+Main.PingIMG.Image = loadImage("rbxassetid://14928685761", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Profile%20icons/icons8-signal-100.png")
 Main.PingIMG.ImageColor3 = Color3.fromRGB(85, 255, 127)
 
 Main.UISizeConstraint.Name = randString()
@@ -14189,7 +14192,7 @@ Main.PlayersIMG.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.PlayersIMG.BorderSizePixel = 0
 Main.PlayersIMG.Position = UDim2.new(-0.094, 0, 0.097, 0)
 Main.PlayersIMG.Size = UDim2.new(0.3, 0, 1, 0)
-Main.PlayersIMG.Image = loadImage("rbxassetid://15055402543", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Players%20icon.png")
+Main.PlayersIMG.Image = loadImage("rbxassetid://15055402543", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Players%20icon.png")
 Main.PlayersIMG.ImageColor3 = Color3.fromRGB(0, 153, 255)
 
 Main.ProfilePanel_UIPageLayout.Name = randString()
@@ -14353,7 +14356,7 @@ Main.HacksHub_Recommended_Script_ImageButton.BorderSizePixel = 0
 Main.HacksHub_Recommended_Script_ImageButton.LayoutOrder = 1
 Main.HacksHub_Recommended_Script_ImageButton.Position = UDim2.new(1.03, 0, 0.5, 0)
 Main.HacksHub_Recommended_Script_ImageButton.Size = UDim2.new(1, 0, 1, 0)
-Main.HacksHub_Recommended_Script_ImageButton.Image = loadImage("rbxassetid://15087586763", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Info%20icon.png")
+Main.HacksHub_Recommended_Script_ImageButton.Image = loadImage("rbxassetid://15087586763", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Info%20icon.png")
 
 Main.UIPadding_200.Name = randString()
 Main.UIPadding_200.PaddingBottom = UDim.new(0.1, 0)
@@ -15460,7 +15463,7 @@ Main.CloseTabButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.CloseTabButton.BorderSizePixel = 0
 Main.CloseTabButton.LayoutOrder = 1
 Main.CloseTabButton.Size = UDim2.new(1, 0, 1, 0)
-Main.CloseTabButton.Image = loadImage("rbxassetid://14925930646", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Close.png")
+Main.CloseTabButton.Image = loadImage("rbxassetid://14925930646", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Close.png")
 Main.CloseTabButton.ImageColor3 = Color3.fromRGB(255, 0, 0)
 
 Main.TextBox_2.Name = randString()
@@ -15544,7 +15547,7 @@ Main.Executor_OptionButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.Executor_OptionButton.BorderSizePixel = 0
 Main.Executor_OptionButton.LayoutOrder = 1
 Main.Executor_OptionButton.Size = UDim2.new(1, 0, 1, 0)
-Main.Executor_OptionButton.Image = loadImage("rbxassetid://15054679910", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Fullscreen.png")
+Main.Executor_OptionButton.Image = loadImage("rbxassetid://15054679910", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Fullscreen.png")
 
 Main.UIListLayout_144.Name = randString()
 Main.UIListLayout_144.SortOrder = Enum.SortOrder.LayoutOrder
@@ -15595,7 +15598,7 @@ Main.Icon_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.Icon_14.BorderSizePixel = 0
 Main.Icon_14.Position = UDim2.new(1, 0, 0.5, 0)
 Main.Icon_14.Size = UDim2.new(0.9, 0, 0.9, 0)
-Main.Icon_14.Image = loadImage("rbxassetid://15054882655", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Execute%20icon.png")
+Main.Icon_14.Image = loadImage("rbxassetid://15054882655", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Execute%20icon.png")
 
 Main.MainClearButton.Name = randString()
 Main.MainClearButton.BackgroundColor3 = Color3.fromRGB(0, 153, 255)
@@ -15627,7 +15630,7 @@ Main.Icon_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.Icon_15.BorderSizePixel = 0
 Main.Icon_15.Position = UDim2.new(0.95, 0, 0.5, 0)
 Main.Icon_15.Size = UDim2.new(0.9, 0, 0.9, 0)
-Main.Icon_15.Image = loadImage("rbxassetid://15054904007", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Clear%20icon.png")
+Main.Icon_15.Image = loadImage("rbxassetid://15054904007", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Clear%20icon.png")
 
 Main.CopyButton.Name = randString()
 Main.CopyButton.BackgroundColor3 = Color3.fromRGB(0, 153, 255)
@@ -15659,7 +15662,7 @@ Main.Icon_16.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.Icon_16.BorderSizePixel = 0
 Main.Icon_16.Position = UDim2.new(1, 0, 0, 0)
 Main.Icon_16.Size = UDim2.new(1, 0, 1, 0)
-Main.Icon_16.Image = loadImage("rbxassetid://15055257525", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Copy%20icon.png")
+Main.Icon_16.Image = loadImage("rbxassetid://15055257525", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Copy%20icon.png")
 
 Main.PasteButton.Name = randString()
 Main.PasteButton.BackgroundColor3 = Color3.fromRGB(0, 153, 255)
@@ -15691,7 +15694,7 @@ Main.Icon_17.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.Icon_17.BorderSizePixel = 0
 Main.Icon_17.Position = UDim2.new(1, 0, 0.5, 0)
 Main.Icon_17.Size = UDim2.new(1, 0, 0.9, 0)
-Main.Icon_17.Image = loadImage("rbxassetid://15055300199", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Paste%20icon.png")
+Main.Icon_17.Image = loadImage("rbxassetid://15055300199", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Paste%20icon.png")
 
 Main.NewScriptButton.Name = randString()
 Main.NewScriptButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -15718,7 +15721,7 @@ Main.Icon_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.Icon_18.BorderSizePixel = 0
 Main.Icon_18.Position = UDim2.new(0.964, 0, 0.527, 0)
 Main.Icon_18.Size = UDim2.new(0.9, 0, 0.9, 0)
-Main.Icon_18.Image = loadImage("rbxassetid://15088057028", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Add%20Script%20icon.png")
+Main.Icon_18.Image = loadImage("rbxassetid://15088057028", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Add%20Script%20icon.png")
 
 Main.ConsoleSection.Name = randString()
 Main.ConsoleSection.AnchorPoint = Vector2.new(1, 1)
@@ -16458,7 +16461,7 @@ Main.ScriptHandler_Delete.BorderSizePixel = 0
 Main.ScriptHandler_Delete.LayoutOrder = 2
 Main.ScriptHandler_Delete.Position = UDim2.new(1.143, 0, 0.062, 0)
 Main.ScriptHandler_Delete.Size = UDim2.new(1, 0, 1, 0)
-Main.ScriptHandler_Delete.Image = loadImage("rbxassetid://15489587422", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Close.png")
+Main.ScriptHandler_Delete.Image = loadImage("rbxassetid://15489587422", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Close.png")
 Main.ScriptHandler_Delete.ImageColor3 = Color3.fromRGB(255, 0, 0)
 
 Main.ScriptHandler_Visibility.Name = randString()
@@ -16468,7 +16471,7 @@ Main.ScriptHandler_Visibility.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.ScriptHandler_Visibility.BorderSizePixel = 0
 Main.ScriptHandler_Visibility.LayoutOrder = 1
 Main.ScriptHandler_Visibility.Size = UDim2.new(1, 0, 1, 0)
-Main.ScriptHandler_Visibility.Image = loadImage("rbxassetid://15280445524", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Fullscreen.png")
+Main.ScriptHandler_Visibility.Image = loadImage("rbxassetid://15280445524", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Fullscreen.png")
 
 Main.ScriptHandler_Edit.Name = randString()
 Main.ScriptHandler_Edit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -16478,7 +16481,7 @@ Main.ScriptHandler_Edit.BorderSizePixel = 0
 Main.ScriptHandler_Edit.LayoutOrder = 2
 Main.ScriptHandler_Edit.Position = UDim2.new(1.143, 0, 0.062, 0)
 Main.ScriptHandler_Edit.Size = UDim2.new(1, 0, 1, 0)
-Main.ScriptHandler_Edit.Image = loadImage("rbxassetid://15489552700", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Close.png")
+Main.ScriptHandler_Edit.Image = loadImage("rbxassetid://15489552700", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Close.png")
 
 Main.ScriptHandler_Back.Name = randString()
 Main.ScriptHandler_Back.AnchorPoint = Vector2.new(0, 1)
@@ -16527,7 +16530,7 @@ Main.ScriptHandler_Visibility_2.BackgroundTransparency = 1
 Main.ScriptHandler_Visibility_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.ScriptHandler_Visibility_2.BorderSizePixel = 0
 Main.ScriptHandler_Visibility_2.Size = UDim2.new(1, 0, 1, 0)
-Main.ScriptHandler_Visibility_2.Image = loadImage("rbxassetid://15087298001", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Fullscreen.png")
+Main.ScriptHandler_Visibility_2.Image = loadImage("rbxassetid://15087298001", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Fullscreen.png")
 
 Main.ScriptsHandler_List.Name = randString()
 Main.ScriptsHandler_List.Active = true
@@ -16592,7 +16595,7 @@ Main.ScriptsHandler_ControlDelete.LayoutOrder = 2
 Main.ScriptsHandler_ControlDelete.Position = UDim2.new(1.143, 0, 0.062, 0)
 Main.ScriptsHandler_ControlDelete.Size = UDim2.new(1, 0, 1, 0)
 Main.ScriptsHandler_ControlDelete.Visible = false
-Main.ScriptsHandler_ControlDelete.Image = loadImage("rbxassetid://15489587422", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Close.png")
+Main.ScriptsHandler_ControlDelete.Image = loadImage("rbxassetid://15489587422", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Close.png")
 Main.ScriptsHandler_ControlDelete.ImageColor3 = Color3.fromRGB(255, 0, 0)
 
 Main.ScriptsHandler_ControlVisibility.Name = randString()
@@ -16603,7 +16606,7 @@ Main.ScriptsHandler_ControlVisibility.BorderSizePixel = 0
 Main.ScriptsHandler_ControlVisibility.LayoutOrder = 1
 Main.ScriptsHandler_ControlVisibility.Size = UDim2.new(1, 0, 1, 0)
 Main.ScriptsHandler_ControlVisibility.Visible = false
-Main.ScriptsHandler_ControlVisibility.Image = loadImage("rbxassetid://15280445524", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Fullscreen.png")
+Main.ScriptsHandler_ControlVisibility.Image = loadImage("rbxassetid://15280445524", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Fullscreen.png")
 
 Main.ScriptsHandler_ControlToggle.Name = randString()
 Main.ScriptsHandler_ControlToggle.AnchorPoint = Vector2.new(1, 0)
@@ -16667,7 +16670,7 @@ Main.ScriptsHandler_ControlVisibility_2.BorderSizePixel = 0
 Main.ScriptsHandler_ControlVisibility_2.LayoutOrder = 1
 Main.ScriptsHandler_ControlVisibility_2.Size = UDim2.new(1, 0, 1, 0)
 Main.ScriptsHandler_ControlVisibility_2.Visible = false
-Main.ScriptsHandler_ControlVisibility_2.Image = loadImage("rbxassetid://15280445524", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Fullscreen.png")
+Main.ScriptsHandler_ControlVisibility_2.Image = loadImage("rbxassetid://15280445524", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Fullscreen.png")
 Main.ScriptsHandler_ControlVisibility_2.ScaleType = Enum.ScaleType.Fit
 
 Main.ScriptsHandler_ControlToggle_2.Name = randString()
@@ -16727,7 +16730,7 @@ Main.ScriptsHandler_ScriptExpander.BorderSizePixel = 0
 Main.ScriptsHandler_ScriptExpander.LayoutOrder = 1
 Main.ScriptsHandler_ScriptExpander.Position = UDim2.new(-0.015, 0, 0, 0)
 Main.ScriptsHandler_ScriptExpander.Size = UDim2.new(1, 0, 1, 0)
-Main.ScriptsHandler_ScriptExpander.Image = loadImage("rbxassetid://15087827184", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Fullscreen.png")
+Main.ScriptsHandler_ScriptExpander.Image = loadImage("rbxassetid://15087827184", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Fullscreen.png")
 Main.ScriptsHandler_ScriptExpander.ScaleType = Enum.ScaleType.Fit
 
 Main.ScriptHub.Name = randString()
@@ -17450,7 +17453,7 @@ Main.Icon_25.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.Icon_25.BorderSizePixel = 0
 Main.Icon_25.Position = UDim2.new(1.2, 0, 0.5, 0)
 Main.Icon_25.Size = UDim2.new(0.75, 0, 0.75, 0)
-Main.Icon_25.Image = loadImage("rbxassetid://16027382818", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Execute%20icon.png")
+Main.Icon_25.Image = loadImage("rbxassetid://16027382818", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Execute%20icon.png")
 Main.Icon_25.ImageColor3 = Color3.fromRGB(0, 153, 255)
 
 Main.CloudScriptsOpenEditor.Name = randString()
@@ -17477,7 +17480,7 @@ Main.Icon_26.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.Icon_26.BorderSizePixel = 0
 Main.Icon_26.Position = UDim2.new(1, 0, 0.5, 0)
 Main.Icon_26.Size = UDim2.new(0.9, 0, 0.9, 0)
-Main.Icon_26.Image = loadImage("rbxassetid://15087298001", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/icons8-dev-48%20(2).png")
+Main.Icon_26.Image = loadImage("rbxassetid://15087298001", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/icons8-dev-48%20(2).png")
 
 Main.CloudScriptsExecute.Name = randString()
 Main.CloudScriptsExecute.BackgroundColor3 = Color3.fromRGB(0, 153, 255)
@@ -17503,7 +17506,7 @@ Main.Icon_27.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.Icon_27.BorderSizePixel = 0
 Main.Icon_27.Position = UDim2.new(0.95, 0, 0.5, 0)
 Main.Icon_27.Size = UDim2.new(0.9, 0, 0.9, 0)
-Main.Icon_27.Image = loadImage("rbxassetid://15054882655", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Execute%20icon.png")
+Main.Icon_27.Image = loadImage("rbxassetid://15054882655", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Execute%20icon.png")
 
 Main.BottomBar_2.Name = randString()
 Main.BottomBar_2.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
@@ -17554,7 +17557,7 @@ Main.Close_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.Close_12.BorderSizePixel = 0
 Main.Close_12.Position = UDim2.new(0.031, 0, 0, 0)
 Main.Close_12.Size = UDim2.new(1, 0, 1, 0)
-Main.Close_12.Image = loadImage("rbxassetid://15280445524", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/icons8-eye-90.png")
+Main.Close_12.Image = loadImage("rbxassetid://15280445524", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/icons8-eye-90.png")
 Main.Close_12.ImageColor3 = Color3.fromRGB(0, 153, 255)
 
 Main.CloudScriptsViews.Name = randString()
@@ -17592,7 +17595,7 @@ Main.Close_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.Close_13.BorderSizePixel = 0
 Main.Close_13.Position = UDim2.new(0.031, 0, 0, 0)
 Main.Close_13.Size = UDim2.new(1, 0, 1, 0)
-Main.Close_13.Image = loadImage("rbxassetid://15280443532", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/icons8-thumbs-up-down-100.png")
+Main.Close_13.Image = loadImage("rbxassetid://15280443532", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/icons8-thumbs-up-down-100.png")
 Main.Close_13.ImageColor3 = Color3.fromRGB(0, 153, 255)
 
 Main.CloudScriptsRating.Name = randString()
@@ -17630,7 +17633,7 @@ Main.Close_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.Close_14.BorderSizePixel = 0
 Main.Close_14.Position = UDim2.new(0.031, 0, 0, 0)
 Main.Close_14.Size = UDim2.new(1, 0, 1, 0)
-Main.Close_14.Image = loadImage("rbxassetid://15234335361", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/icons8-key-100.png")
+Main.Close_14.Image = loadImage("rbxassetid://15234335361", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/icons8-key-100.png")
 Main.Close_14.ImageColor3 = Color3.fromRGB(0, 153, 255)
 
 Main.CloudScriptsKey.Name = randString()
@@ -17658,7 +17661,7 @@ Main.CloudScriptsInfoButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.CloudScriptsInfoButton.BorderSizePixel = 0
 Main.CloudScriptsInfoButton.LayoutOrder = 5
 Main.CloudScriptsInfoButton.Size = UDim2.new(1, 0, 1, 0)
-Main.CloudScriptsInfoButton.Image = loadImage("rbxassetid://15087586763", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Info%20icon.png")
+Main.CloudScriptsInfoButton.Image = loadImage("rbxassetid://15087586763", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Info%20icon.png")
 
 Main.CloudScriptsContent.Name = randString()
 Main.CloudScriptsContent.Active = true
@@ -17718,7 +17721,7 @@ Main.CloudScripts_GameIcon.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.CloudScripts_GameIcon.BorderSizePixel = 0
 Main.CloudScripts_GameIcon.Position = UDim2.new(0.031, 0, 0, 0)
 Main.CloudScripts_GameIcon.Size = UDim2.new(1, 0, 1, 0)
-Main.CloudScripts_GameIcon.Image = loadImage("rbxassetid://15280447589", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/icons8-game-100.png")
+Main.CloudScripts_GameIcon.Image = loadImage("rbxassetid://15280447589", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/icons8-game-100.png")
 Main.CloudScripts_GameIcon.ImageColor3 = Color3.fromRGB(0, 153, 255)
 
 Main.CloudScripts_GameName.Name = randString()
@@ -17761,7 +17764,7 @@ Main.CloudScripts_TimeIcon.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.CloudScripts_TimeIcon.BorderSizePixel = 0
 Main.CloudScripts_TimeIcon.Position = UDim2.new(-0.003, 0, 0, 0)
 Main.CloudScripts_TimeIcon.Size = UDim2.new(1, 0, 1, 0)
-Main.CloudScripts_TimeIcon.Image = loadImage("rbxassetid://15280445524", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/icons8-eye-90.png")
+Main.CloudScripts_TimeIcon.Image = loadImage("rbxassetid://15280445524", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/icons8-eye-90.png")
 Main.CloudScripts_TimeIcon.ImageColor3 = Color3.fromRGB(0, 153, 255)
 
 Main.CloudScripts_TimeName.Name = randString()
@@ -21337,7 +21340,7 @@ Main.ScriptsHandler_ControlBarDelete.BorderSizePixel = 0
 Main.ScriptsHandler_ControlBarDelete.LayoutOrder = 2
 Main.ScriptsHandler_ControlBarDelete.Position = UDim2.new(1.143, 0, 0.062, 0)
 Main.ScriptsHandler_ControlBarDelete.Size = UDim2.new(1, 0, 1, 0)
-Main.ScriptsHandler_ControlBarDelete.Image = loadImage("rbxassetid://15102967594", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Close.png")
+Main.ScriptsHandler_ControlBarDelete.Image = loadImage("rbxassetid://15102967594", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/5e1e13e796089584a62e2930664b484564631c50/Images/Close.png")
 Main.ScriptsHandler_ControlBarDelete.ImageColor3 = Color3.fromRGB(255, 0, 0)
 
 Main.PageInfo_PageTitle_2.Name = randString()
@@ -33842,7 +33845,8 @@ task.spawn(function()
 			count += 1
 		until new and new ~= "Unknown"
 
-		if not updated and getversion then
+		--if not updated and getversion then
+		if false then --disable version checking
 			-- Print that is not up to date and Yield
 			local popup = popups.create(popups.data.types.UpdateDetectedWithRoblox, "robloxversion")
 			popup.OnResponse.Event:Connect(function(response)
@@ -33856,10 +33860,12 @@ task.spawn(function()
 			return
 		end
 
-		if authentication.isKeyless() then
+		--if authentication.isKeyless() then
+		if true then --use keyless mode
 			authentication.updateStatus(86400)
 			Main.ExpiringTimer_Value.Text = "Keyless"
-			misc.toast.long("Keyless", "Arceus X is currently in keyless mode! enjoy without having to deal with the keysystem!")
+			--misc.toast.long("Keyless", "Arceus X is currently in keyless mode! enjoy without having to deal with the keysystem!")
+			misc.toast.long("Cracked", "Arceus X is cracked, enjoy keyless! :D");
 		else
 			if not gethwid or not gethwid() then
 				rconsole.warn("This exploit does not support gethwid / get_hwid function")	
@@ -34142,17 +34148,17 @@ do
 	elements.loadFloatingBar()
 	elements.loadFloatingIcon()
 
-	elements.addRecommended("Fly", 				"Soar to new heights and take your gaming to the next level with effortless flying capabilities!",								"executecode(game:HttpGet('https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Scripts/ArceusX-Fly.lua', true))")
-	elements.addRecommended("Aimbot", 			"Eliminate manual aiming and elevate your gaming experience with seamless and effortless targeting!",							"executecode(game:HttpGet('https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Scripts/ArceusX-Aimbot.lua', true))")
-	elements.addRecommended("Shiftlock",		"Switch from normal to lateral camera view for an electrifying perspective",													"executecode(game:HttpGet('https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Scripts/ArceusX-Shiftlock.lua', true))")
-	elements.addRecommended("Keyboard",			"Interact with any non-mobile script with our virtual keyboard!",																"executecode(game:HttpGet('https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Scripts/ArceusX-Keyboard.lua', true))")
+	elements.addRecommended("Fly", 				"Soar to new heights and take your gaming to the next level with effortless flying capabilities!",								"executecode(game:HttpGet('https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Scripts/ArceusX-Fly.lua', true))")
+	elements.addRecommended("Aimbot", 			"Eliminate manual aiming and elevate your gaming experience with seamless and effortless targeting!",							"executecode(game:HttpGet('https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Scripts/ArceusX-Aimbot.lua', true))")
+	elements.addRecommended("Shiftlock",		"Switch from normal to lateral camera view for an electrifying perspective",													"executecode(game:HttpGet('https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Scripts/ArceusX-Shiftlock.lua', true))")
+	elements.addRecommended("Keyboard",			"Interact with any non-mobile script with our virtual keyboard!",																"executecode(game:HttpGet('https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Scripts/ArceusX-Keyboard.lua', true))")
 	elements.addRecommended("Fps Unlocker",		"Unlock your fps for the best smooth experience!",																				"executecode('setfpscap(0)')")
-	elements.addRecommended("Infinite Yield",	"Unleash endless gaming potential with just a few simple commands, thanks to a powerful command line!",							"executecode(game:HttpGet('https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Scripts/Infinite-Yield.lua', true))")
-	elements.addRecommended("DEX Explorer",		"An intuitive script that allows you to explore and analyze game structures with ease!",										"executecode(game:HttpGet('https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Scripts/Dex-Explorer.lua', true))")
-	elements.addRecommended("Fates ESP",		"Unlock hidden entities: show health, name, and bounding box of previously invisible entities!",								"executecode(game:HttpGet('https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Scripts/Fates-ESP.lua', true))")
-	elements.addRecommended("BTools",			"Build, destroy, and mold your world to your heart's desire with limitless freedom!",											"executecode(game:HttpGet('https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Scripts/BTools.lua', true))")
-	--elements.addRecommended("Owl Hub",			"A versatile Hub working on multiple games, unleash powerful cheats and elevate your gaming experience!",						"executecode(game:HttpGet('https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Scripts/Owl-Hub.lua', true))")
-	--elements.addRecommended("Pwner Hub",		"Unleash your full potential with many features that will allow you to customize your gaming experience and become the MVP!", 	"executecode(game:HttpGet('https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Scripts/Pwner-Hub.lua', true))")
+	elements.addRecommended("Infinite Yield",	"Unleash endless gaming potential with just a few simple commands, thanks to a powerful command line!",							"executecode(game:HttpGet('https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Scripts/Infinite-Yield.lua', true))")
+	elements.addRecommended("DEX Explorer",		"An intuitive script that allows you to explore and analyze game structures with ease!",										"executecode(game:HttpGet('https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Scripts/Dex-Explorer.lua', true))")
+	elements.addRecommended("Fates ESP",		"Unlock hidden entities: show health, name, and bounding box of previously invisible entities!",								"executecode(game:HttpGet('https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Scripts/Fates-ESP.lua', true))")
+	elements.addRecommended("BTools",			"Build, destroy, and mold your world to your heart's desire with limitless freedom!",											"executecode(game:HttpGet('https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Scripts/BTools.lua', true))")
+	--elements.addRecommended("Owl Hub",			"A versatile Hub working on multiple games, unleash powerful cheats and elevate your gaming experience!",						"executecode(game:HttpGet('https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Scripts/Owl-Hub.lua', true))")
+	--elements.addRecommended("Pwner Hub",		"Unleash your full potential with many features that will allow you to customize your gaming experience and become the MVP!", 	"executecode(game:HttpGet('https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Scripts/Pwner-Hub.lua', true))")
 	--elements.addFavourite("Favourite", "Favourite Script", "print('Favourite')")
 	--elements.addFeatured("Featured", "Featured Script", "print('Featured')")
 	--elements.addSaved("Saved", "Last Saved Script", "print('Last Saved')")
@@ -34559,7 +34565,7 @@ do -- Values divisor
 	local icon = buttons.holdable(Main.FloatingIcon, false)
 	local defaultSize = Main.MainWindow.Size
 	local maximiseImage = Main.ControlBox_FullScreen.Image
-	local minimizeImage = "rbxassetid://15568144429" --storage.saveAssetFromUrl(storage.data.types.Temporary, "MinimizeGui.png", "https://raw.githubusercontent.com/SPDM-Team/Arceus-X-NEO-public/main/Images/icons8-minimize-keep-down-reduce-button-decrease-screen-size-shrink-100.png", true)
+	local minimizeImage = "rbxassetid://15568144429" --storage.saveAssetFromUrl(storage.data.types.Temporary, "MinimizeGui.png", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/icons8-minimize-keep-down-reduce-button-decrease-screen-size-shrink-100.png", true)
 	local transictionTime = 0.5
 	local maximized = false
 	local debounce = false
@@ -34822,6 +34828,7 @@ do -- Values divisor
 	end
 
 	local function restoreKey()
+		return; --disable restore key
 		if gethwid then
 			local success, content = pcall(function()
 				return game:HttpGet("https://spdmteam.com/api/deletekey?hwid=" .. misc.crypt.base64.encode(misc.crypt.encryptDecrypt(gethwid(), "BBC")), true)
@@ -34859,6 +34866,7 @@ do -- Values divisor
 	end)
 
 	plan.ShortClick.Event:Connect(function()
+		return; --disable plans
 		if configs.getSetting("ConfirmationPopup") then
 			if gethwid then
 				misc.url.open("https://spdmteam.com/plans?hwid=" .. gethwid() .. "&zone=Europe/Rome" , false)
@@ -34869,6 +34877,7 @@ do -- Values divisor
 	end)
 
 	plan.LongClick.Event:Connect(function()
+		return; --disable plans
 		if gethwid then
 			misc.url.open("https://spdmteam.com/plans?hwid=" .. gethwid() .. "&zone=Europe/Rome" , false)
 		end
@@ -36426,9 +36435,8 @@ end
 		[ SHOW UI ]
 ]]
 
---if isStudio then
-if not isStudio then
-  arceus_loaded = true
+if isStudio then
+	arceus_loaded = true
 	Main.KeySystem.Visible = false
 	Main.FloatingIcon.Visible = true
 end
