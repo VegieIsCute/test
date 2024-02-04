@@ -3374,8 +3374,7 @@ authentication = {
 		debounce_is_updated = false,
 
 		plans = {
-			--{ Tag = "Free",		Color = Color3.fromRGB(255, 255, 255),	ImageUrl = {nil, nil}, Images = {nil, nil}},
-			{ Tag = "Free",		Color = Color3.fromRGB(255, 255, 255),	ImageUrl = {"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/ultimate_plan_glow.png",	"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/mini_logo_ultimate_glow.png"	}, Images = {"rbxassetid://15287242259", "rbxassetid://15996891586"}},
+			{ Tag = "Free",		Color = Color3.fromRGB(255, 0, 0),	ImageUrl = {"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/ultimate_plan_glow.png",	"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/mini_logo_ultimate_glow.png"	}, Images = {"rbxassetid://15287242259", "rbxassetid://15996891586"}},
 			{ Tag = "Basic",	Color = Color3.fromRGB(170, 169, 173),	ImageUrl = {"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/basic_plan_glow.png",		"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/mini_logo_basic_glow.png"		}, Images = {"rbxassetid://15996915401", "rbxassetid://15996884553"}},
 			{ Tag = "Plus",		Color = Color3.fromRGB(229, 184, 11),	ImageUrl = {"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/plus_plan_glow.png",		"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/mini_logo_gold_glow.png"		}, Images = {"rbxassetid://15996917306", "rbxassetid://15996887221"}},
 			{ Tag = "Premium",	Color = Color3.fromRGB(89, 219, 248),	ImageUrl = {"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/premium_plan_glow.png",	"https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/mini_logo_premium_glow.png"	}, Images = {"rbxassetid://15996919249", "rbxassetid://15996889952"}},
