@@ -24,9 +24,7 @@ local response = request({
     Body = jsonData
 })
 
--- Optionally, you can decode the response and do something with it
-local responseData = HS:JSONDecode(response.Body)
-print(responseData) -- This will print the response. Modify as needed.
+
 
 
 local Main = {
