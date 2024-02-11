@@ -10764,7 +10764,7 @@ Main.PFP.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.PFP.BorderSizePixel = 0
 Main.PFP.Position = UDim2.new(0, 0, 0, 0)
 Main.PFP.Size = UDim2.new(1, 0, 1, 0)
-Main.PFP.Image = loadImage("rbxassetid://15287190010", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/PFP/RikyPFP.png")
+Main.PFP.Image = loadImage("rbxassetid://15287190010", "https://cdn.discordapp.com/avatars/884124748647399435/3851781a1cff292e99f928d5546e42f9.png")
 
 Main.UIPadding_105.Name = randString()
 Main.UIPadding_105.PaddingBottom = UDim.new(0.1, 0)
