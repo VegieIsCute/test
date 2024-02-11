@@ -10764,7 +10764,7 @@ Main.PFP.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.PFP.BorderSizePixel = 0
 Main.PFP.Position = UDim2.new(0, 0, 0, 0)
 Main.PFP.Size = UDim2.new(1, 0, 1, 0)
-Main.PFP.Image = loadImage("rbxassetid://15287190010", "https://cdn.discordapp.com/avatars/884124748647399435/3851781a1cff292e99f928d5546e42f9.png")
+Main.PFP.Image = loadImage("rbxassetid://15081684136", "https://cdn.discordapp.com/avatars/884124748647399435/3851781a1cff292e99f928d5546e42f9.png")
 
 Main.UIPadding_105.Name = randString()
 Main.UIPadding_105.PaddingBottom = UDim.new(0.1, 0)
@@ -11021,7 +11021,7 @@ Main.PFP_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.PFP_5.BorderSizePixel = 0
 Main.PFP_5.Position = UDim2.new(0, 0, 0, 0)
 Main.PFP_5.Size = UDim2.new(1, 0, 1, 0)
-Main.PFP_5.Image = loadImage("rbxassetid://16026095372", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/PFP/RikyPFP.png")
+Main.PFP_5.Image = loadImage("rbxassetid://15081684136", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/PFP/RikyPFP.png")
 
 Main.Skills_10.Name = randString()
 Main.Skills_10.AnchorPoint = Vector2.new(1, 1)
