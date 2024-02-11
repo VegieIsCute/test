@@ -10962,7 +10962,7 @@ Main.PFP_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.PFP_4.BorderSizePixel = 0
 Main.PFP_4.Position = UDim2.new(0, 0, 0, 0)
 Main.PFP_4.Size = UDim2.new(1, 0, 1, 0)
-Main.PFP_4.Image = loadImage(nil, "https://cdn.discordapp.com/avatars/884124748647399435/3851781a1cff292e99f928d5546e42f9.png?size=4096")
+Main.PFP_4.Image = loadImage("13992859543", "https://cdn.discordapp.com/avatars/884124748647399435/3851781a1cff292e99f928d5546e42f9.png?size=4096")
 
 Main.Skills_9.Name = randString()
 Main.Skills_9.AnchorPoint = Vector2.new(1, 1)
