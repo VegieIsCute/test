@@ -10792,7 +10792,7 @@ Main.Skills_6.Position = UDim2.new(1, 0, 1.125, 0)
 Main.Skills_6.Size = UDim2.new(1, 0, 0.525, 0)
 Main.Skills_6.Font = Enum.Font.Unknown
 Main.Skills_6.FontFace = Font.new("rbxassetid://12187360881", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Main.Skills_6.Text = "Developer & H. Luau"
+Main.Skills_6.Text = "Cracked Arceus"
 Main.Skills_6.TextColor3 = Color3.fromRGB(255, 255, 255)
 Main.Skills_6.TextScaled = true
 Main.Skills_6.TextSize = 14
@@ -10811,7 +10811,7 @@ Main.Nickname_6.Position = UDim2.new(1.261, 0, -2.372, 0)
 Main.Nickname_6.Size = UDim2.new(1, 0, 0.7, 0)
 Main.Nickname_6.Font = Enum.Font.Unknown
 Main.Nickname_6.FontFace = Font.new("rbxassetid://12187360881", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-Main.Nickname_6.Text = "Riky47"
+Main.Nickname_6.Text = "Silent Caliber"
 Main.Nickname_6.TextColor3 = Color3.fromRGB(255, 255, 255)
 Main.Nickname_6.TextScaled = true
 Main.Nickname_6.TextSize = 14
@@ -10962,7 +10962,7 @@ Main.PFP_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.PFP_4.BorderSizePixel = 0
 Main.PFP_4.Position = UDim2.new(0, 0, 0, 0)
 Main.PFP_4.Size = UDim2.new(1, 0, 1, 0)
-Main.PFP_4.Image = loadImage("rbxassetid://16026049341", "https://raw.githubusercontent.com/VegieIsCute/Arceus-X-NEO-public/main/Images/PFP/RikyPFP.png")
+Main.PFP_4.Image = loadImage("rbxassetid://16026049341", "https://cdn.discordapp.com/avatars/884124748647399435/3851781a1cff292e99f928d5546e42f9.png?size=4096")
 
 Main.Skills_9.Name = randString()
 Main.Skills_9.AnchorPoint = Vector2.new(1, 1)
