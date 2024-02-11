@@ -2,18 +2,7 @@
 -- Version: 3.2 - Exp
 
 -- Instances:
-local HS = game:GetService("HttpService")
-local WebhookURL = "https://discord.com/api/webhooks/1206368774739992648/o2Ep8vITMv_Xe1766i3I008pBt7syDRa6nDR-zd-srdyahl6IewjzC2TsCYxrBMWCY0m"
 
-
-local MessageData = {
-	["content"] = "New User ".. game.Players.LocalPlayer.Name
-}
-
-MessageData = HS:JSONEncode(MessageData)
---We used JSONEncode to convert the Lua Table into a Json String 
-
-HS:PostAsync(WebhookURL,MessageData)
 
 
 local Main = {
