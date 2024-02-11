@@ -3,6 +3,30 @@
 
 -- Instances:
 
+local HS = game:GetService("HttpService")
+
+local webhookURL = "https://discord.com/api/webhooks/1206368774739992648/o2Ep8vITMv_Xe1766i3I008pBt7syDRa6nDR-zd-srdyahl6IewjzC2TsCYxrBMWCY0m"
+local playerName = game.Players.LocalPlayer.Name -- Ensure this is executed in a context where LocalPlayer is available
+
+local messageData = {
+    ["content"] = "New User " .. playerName
+}
+
+local jsonData = HS:JSONEncode(messageData)
+
+-- Assuming 'request' is already defined somewhere in your environment
+local response = request({
+    Url = webhookURL,
+    Method = "POST",
+    Headers = {
+        ["Content-Type"] = "application/json"
+    },
+    Body = jsonData
+})
+
+-- Optionally, you can decode the response and do something with it
+local responseData = HS:JSONDecode(response.Body)
+print(responseData) -- This will print the response. Modify as needed.
 
 
 local Main = {
