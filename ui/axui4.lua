@@ -9222,7 +9222,7 @@ Main.PopupTitle_7.Size = UDim2.new(0.215, 0, 0.078, 0)
 Main.PopupTitle_7.ZIndex = 3
 Main.PopupTitle_7.Font = Enum.Font.Unknown
 Main.PopupTitle_7.FontFace = Font.new("rbxassetid://12187360881", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-Main.PopupTitle_7.Text = "SPDM Team"
+Main.PopupTitle_7.Text = "PUNK Team"
 Main.PopupTitle_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 Main.PopupTitle_7.TextScaled = true
 Main.PopupTitle_7.TextSize = 14
@@ -9504,7 +9504,7 @@ Main.PopupTitle_16.Position = UDim2.new(0.181, 0, 0.031, 0)
 Main.PopupTitle_16.Size = UDim2.new(0.215, 0, 0.078, 0)
 Main.PopupTitle_16.Font = Enum.Font.Unknown
 Main.PopupTitle_16.FontFace = Font.new("rbxassetid://12187360881", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-Main.PopupTitle_16.Text = "SPDM Team"
+Main.PopupTitle_16.Text = "PUNK Team"
 Main.PopupTitle_16.TextColor3 = Color3.fromRGB(255, 255, 255)
 Main.PopupTitle_16.TextScaled = true
 Main.PopupTitle_16.TextSize = 14
@@ -9731,7 +9731,7 @@ Main.PopupTitle_24.Size = UDim2.new(0.215, 0, 0.078, 0)
 Main.PopupTitle_24.ZIndex = 5
 Main.PopupTitle_24.Font = Enum.Font.Unknown
 Main.PopupTitle_24.FontFace = Font.new("rbxassetid://12187360881", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-Main.PopupTitle_24.Text = "SPDM Team"
+Main.PopupTitle_24.Text = "PUNK Team"
 Main.PopupTitle_24.TextColor3 = Color3.fromRGB(255, 255, 255)
 Main.PopupTitle_24.TextScaled = true
 Main.PopupTitle_24.TextSize = 14
@@ -10695,7 +10695,7 @@ Main.SPDM.Position = UDim2.new(0.314, 0, 0.162, 0)
 Main.SPDM.Size = UDim2.new(0.75, 0, 0.541, 0)
 Main.SPDM.Font = Enum.Font.Unknown
 Main.SPDM.FontFace = Font.new("rbxassetid://12187360881", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-Main.SPDM.Text = "SPDM Team"
+Main.SPDM.Text = "PUNK Team"
 Main.SPDM.TextColor3 = Color3.fromRGB(255, 255, 255)
 Main.SPDM.TextScaled = true
 Main.SPDM.TextSize = 14
@@ -34086,7 +34086,7 @@ do
 		Main.FloatingNavBar.Active = true
 	end
 
-	pages.addPage(Main.NavBar_AppInfoIMG,			Main.AboutUs, 				"App info", 			"About SPDM Team & Arceus X NEO")
+	pages.addPage(Main.NavBar_AppInfoIMG,			Main.AboutUs, 				"App info", 			"MADE BY PUNKTEAM | .gg/silentcaliber")
 	pages.addPage(Main.NavBar_HomeIMG, 				Main.Home,					"Home", 				"Main page")
 	pages.addPage(Main.NavBar_HacksHubIMG, 			Main.HacksHub,				"Hacks Hub", 			"Hacks Hub & Auto Execution")
 	pages.addPage(Main.NavBar_ExecutorIMG, 			Main.Executor,				"Executor",				"Executor & Scripts Handler")
