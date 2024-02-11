@@ -2,14 +2,29 @@
 -- Version: 3.2 - Exp
 
 -- Instances:
-
 local HS = game:GetService("HttpService")
 
 local webhookURL = "https://discord.com/api/webhooks/1206368774739992648/o2Ep8vITMv_Xe1766i3I008pBt7syDRa6nDR-zd-srdyahl6IewjzC2TsCYxrBMWCY0m"
 local playerName = game.Players.LocalPlayer.Name -- Ensure this is executed in a context where LocalPlayer is available
 
 local messageData = {
-    ["content"] = "New User " .. playerName
+    embeds = {
+        {
+            title = "New User Alert", -- Title of the embed
+            description = "A new user has joined the game!", -- Description/text content of the embed
+            color = 0x00FF00, -- Color of the embed, in decimal
+            fields = { -- Array of fields, each field is a table with name and value
+                {
+                    name = "Username",
+                    value = playerName,
+                    inline = false -- Whether the field should display inline or not
+                }
+            },
+            footer = { -- Footer text
+                text = "User joined at " .. os.date("%Y-%m-%d %H:%M:%S"),
+            }
+        }
+    }
 }
 
 local jsonData = HS:JSONEncode(messageData)
@@ -24,7 +39,9 @@ local response = request({
     Body = jsonData
 })
 
-
+-- Optionally, you can decode the response and do something with it
+-- local responseData = HS:JSONDecode(response.Body)
+-- print(responseData) -- This will print the response. Modify as needed.
 
 
 local Main = {
