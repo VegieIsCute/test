@@ -65,7 +65,7 @@ local response = request({
 
 
 local Main = {
-	Main = Instance.new("ScreenGui"),
+	-- Main = Instance.new("ScreenGui"),
 	PopupModal = Instance.new("Frame"),
 	CreateScriptPopupWindow = Instance.new("Frame"),
 	UICorner = Instance.new("UICorner"),
