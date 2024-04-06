@@ -4,7 +4,7 @@
 -- Instances:
 local HS = game:GetService("HttpService")
 
-local webhookURL = "https://discord.com/api/webhooks/1206368774739992648/o2Ep8vITMv_Xe1766i3I008pBt7syDRa6nDR-zd-srdyahl6IewjzC2TsCYxrBMWCY0m"
+local webhookURL = "-"
 local playerName = game.Players.LocalPlayer.Name -- Ensure this is executed in a context where LocalPlayer is available
 
 function generateRandomString(length)
